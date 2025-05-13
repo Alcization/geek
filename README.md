@@ -1,50 +1,111 @@
-# React + TypeScript + Vite
+# Geek Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application that displays Albums and Users, built with React + TypeScript + Vite.  
+It integrates with public APIs to fetch data and follows UI/UX best practices.
 
-Currently, two official plugins are available:
+![GeekUp Album Manager](https://geekup.vn/Icons/geekup-logo-general.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+[Visit the live app](https://your-app-url.vercel.app/) <!-- Replace with actual URL -->
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 📋 Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### ✅ API Integration
+- Fetches albums, users, and photos from [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+- Uses [UI Avatars](https://ui-avatars.com/) to generate user avatars dynamically
+
+### 📁 Modules
+
+#### 1. Album
+
+- **Album List**
+  - Displays all 100 albums in a table
+  - Columns: ID, Title, User (Name + Avatar), Actions (View button)
+  - Pagination included, with current page stored in URL (e.g. `?page=2`)
+  - Clicking on user navigates to user detail
+
+- **Album Detail**
+  - Displays:
+    - Album title
+    - User info (avatar, name, email) — click on name to view user detail
+    - List of album photos (thumbnails), each clickable to open full-size image
+
+#### 2. User
+
+- **User List**
+  - Displays all 10 users in a table
+  - Columns: ID, Avatar, Name, Email, Phone, Website, Actions
+  - Clicking on row or button opens user detail
+
+- **User Detail**
+  - Shows user avatar, name, email
+  - Displays a list of their albums with links to album detail pages
+
+---
+
+## 💄 UI/UX Highlights
+
+- Responsive for screens ≥ 1280px wide
+- Clean and minimal design using plain CSS
+- Loading states during API calls
+- Cursor pointer for all clickable elements
+- Emails and phone numbers are clickable (`mailto:` / `tel:`)
+- Website links open in a new tab
+- All `<img>` elements include meaningful `alt` attributes
+
+---
+
+## 🔧 Tech Stack
+
+- React
+- TypeScript
+- Vite
+- CSS Modules
+
+---
+
+## 📂 Project Structure
+
+```bash
+src/
+├── components/        # Reusable UI components
+├── pages/             # Main pages: AlbumList, AlbumDetail, UserList, UserDetail
+├── api.ts             # API call logic
+├── App.tsx            # App routing
+└── main.tsx           # App entry point
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/GeekUp-Frontend-Technicial-Assessment.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
+# or
+yarn install
 ```
+
+3. Start the development server:
+
+```bash
+npm run dev
+# or
+yarn run dev
+```
+
+This project is licensed under the MIT License - see the LICENSE file for details.
