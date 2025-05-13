@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+  background: #f9fafa;
+  color: #46505b;
+}
+
+.app-root {
+  min-height: 100vh;
+  background: #f9fafa;
+  display: flex;
+}
+
+.main-content {
+  flex: 1 1 0%;
+  display: flex;
+  justify-content: center;
+  background: #f9fafa;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    padding: 0;
+  }
+}
+
+a,
+button,
+[role="button"],
+.clickable-link,
+.nav-link,
+.show-btn {
+  cursor: pointer;
+}

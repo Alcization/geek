@@ -1,0 +1,128 @@
+.albums-table-area {
+  background: #fff;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: none;
+  padding: 24px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 84vh;
+}
+
+.albums-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  font-size: 1.06rem;
+  color: #222;
+}
+.albums-table th,
+.albums-table td {
+  text-align: left;
+  padding: 16px 12px;
+}
+.albums-table th {
+  color: #222;
+  font-weight: 600;
+  font-size: 1.06rem;
+  background: #fff;
+  border-bottom: 2px solid #f1f3f4;
+}
+.albums-table tbody tr {
+  border-bottom: 1.5px solid #f1f3f4;
+  transition: background 0.13s;
+}
+.albums-table tbody tr:hover {
+  background: #f9fafa;
+}
+.user-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  font-weight: 600;
+  font-size: 1.01rem;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 7px;
+  box-shadow: 0 1px 4px #f7c8eb23;
+}
+.user-name {
+  color: #3b82f6;
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.01rem;
+  cursor: pointer;
+  margin-right: 7px;
+}
+.show-btn {
+  background: #fff;
+  color: #46505b;
+  border: 1.5px solid #bcbcbc;
+  border-radius: 7px;
+  padding: 7px 16px 7px 10px;
+  font-size: 1.01rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: border .15s;
+}
+.show-btn .eye-icon {
+  font-size: 1.06em;
+}
+.show-btn:hover {
+  border: 1.5px solid #c62862;
+  color: #c62862;
+}
+.pagination-area {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  gap: 16px;
+}
+.pagination-arrow {
+  background: #fff;
+  border: none;
+  color: #7c7c7c;
+  font-size: 1.18rem;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background .12s;
+}
+.pagination-arrow:hover {
+  background: #f9fafa;
+}
+.pagination-num {
+  background: #fff;
+  border: 1.2px solid #cddade;
+  color: #46505b;
+  font-weight: 500;
+  border-radius: 7px;
+  font-size: 1.01rem;
+  padding: 4px 13px;
+  margin: 0 1.5px;
+  cursor: pointer;
+  transition: border .12s, color .12s;
+}
+.pagination-num.active,
+.pagination-num:hover {
+  border: 1.8px solid #3b82f6;
+  color: #3b82f6;
+}
+.page-size-select {
+  border: 1.2px solid #cddade;
+  border-radius: 7px;
+  padding: 4px 10px;
+  font-size: 1rem;
+  color: #46505b;
+  outline: none;
+  margin-left: 10px;
+}

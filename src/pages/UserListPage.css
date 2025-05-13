@@ -1,0 +1,54 @@
+
+.user-list-page {
+  margin: 40px auto 0 40px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  min-width: calc(100% - 48px);
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.user-avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.clickable-link {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.clickable-link:hover {
+  text-decoration: underline;
+}
+
+.loading-state,
+.error-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.error-state {
+  color: #c62862;
+}
+
+.albums-table td .show-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
